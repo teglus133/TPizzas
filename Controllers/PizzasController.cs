@@ -51,7 +51,7 @@ namespace Pizzas.API.Controllers{
                     respuesta = NotFound();
                 }else
                 {
-                    intRowsAffected = BD.UpdateById(pizza);
+                    intRowsAffected = BD.UpdateById(pizza, id);
                     if (intRowsAffected > 0)
                     {
                         respuesta = Ok(pizza);
